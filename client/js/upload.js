@@ -97,26 +97,28 @@ class FileUploader {
 
     showLoading() {
         this.uploadBox.html(`
-            <div class="upload-status">
+            <div class="upload-status" style="display: block;">
                 <i class="fas fa-spinner fa-spin fa-2x mb-3"></i>
-                <p>Uploading...</p>
+                <p>Uploading your image...</p>
+                <small class="text-muted">Please wait while we process your file</small>
             </div>
         `);
     }
 
     showSuccess(response) {
         this.uploadBox.html(`
-            <div class="upload-status">
+            <div class="upload-status" style="display: block;">
                 <i class="fas fa-check-circle fa-2x text-success mb-3"></i>
                 <p>Upload successful!</p>
-                <small class="text-muted">${response.file.filename}</small>
+                <small class="text-muted">File: ${response.file.filename}</small>
+                <small class="text-muted d-block mt-2">Your image is now ready to use</small>
             </div>
         `);
 
-        // Reset after 3 seconds
+        // Reset after 4 seconds
         setTimeout(() => {
             this.resetUploadBox();
-        }, 3000);
+        }, 4000);
     }
 
     showError(message) {
@@ -124,7 +126,7 @@ class FileUploader {
         const errorTitle = typeof message === 'object' ? message.error : 'Upload Error';
         
         this.uploadBox.html(`
-            <div class="upload-status error-status">
+            <div class="upload-status error-status" style="display: block;">
                 <i class="fas fa-exclamation-circle fa-2x text-danger mb-3"></i>
                 <h5 class="error-title">${errorTitle}</h5>
                 <p class="error-message">${errorDetails}</p>
