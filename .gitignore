@@ -10,8 +10,8 @@ yarn-error.log
 .env.*.local
 
 # Uploaded files
-upload_images/*
-!upload_images/.gitkeep
+server/upload_images/*
+!server/upload_images/.gitkeep
 
 # IDE and editor files
 .idea/
