@@ -2,6 +2,10 @@
 
 ClickFit is a modern web application that allows users to upload and manage images with a beautiful and intuitive interface. The application features drag-and-drop functionality, real-time upload status feedback, and responsive design.
 
+## Demo
+
+Watch the application in action: [ClickFit Demo Video](https://jam.dev/c/8ab4d1f2-e50e-474b-8227-6a91cdb306a9)
+
 ## Features
 
 - 🖼️ Drag and drop image upload
